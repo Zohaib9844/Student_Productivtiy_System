@@ -1,0 +1,58 @@
+.card {
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+    text-align: center;
+  }
+  
+  .card-header h5 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .table {
+    margin-top: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .table thead th {
+    font-weight: 600;
+    color: #333;
+    border-bottom: none;
+  }
+  
+  .table tbody tr {
+    background-color: #fefefe;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .table tbody tr td {
+    padding: 1rem;
+    vertical-align: middle;
+  }
+  
+  .table tbody tr + tr {
+    border-top: 1px solid #f4f4f4;
+  }
+  
+  /* Due date style */
+  .table td:last-child {
+    color: red;
+    font-weight: 500;
+  }
+  
+  /* Optional: highlight one row (like the orange-bordered one) */
+  .table tbody tr:nth-child(2) {
+    border: 1px solid #ffedcc;
+    background-color: #fffaf3;
+    border-radius: 10px;
+  }
+  

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import './MonthlyView.css'; 
 
 const currentMonth = ref('May 2023');
 const weeks = ref([
@@ -17,7 +18,7 @@ const events = ref([
 </script>
 
 <template>
-    <div class="card">
+    <div class="cardc">
         <div class="card-header bg-white">
             <h5 class="mb-0">Calendar</h5>
         </div>

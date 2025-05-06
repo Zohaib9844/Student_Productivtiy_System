@@ -159,6 +159,21 @@ const settings = ref([
 </template>
 
 <style scoped>
+#app {
+  max-width: 2200px;
+  margin: 0 120px;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+/* Add your media query for larger screens */
+@media (min-width: 2200px) {
+  #app {
+    display: grid;
+    grid-template-columns: none;
+    padding: 0;
+  }
+}
 .setting-item {
     cursor: pointer;
     transition: all 0.2s ease;
@@ -170,5 +185,42 @@ const settings = ref([
 
 .setting-item.active {
     background-color: #e9ecef;
+}
+
+/* Fixed container styling */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
+}
+
+/* Main content spacing */
+main {
+    margin-top: 90px;
+    margin-bottom: 70px;
+    padding: 20px 0;
+}
+
+/* Proper row and column spacing */
+.row {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+
+/* Give columns their proper Bootstrap spacing */
+.col-md-4, .col-md-8, .col-lg-3, .col-lg-9 {
+    padding: 0 15px !important;
+}
+
+/* Add spacing between cards */
+.card {
+    margin-bottom: 20px;
+}
+
+/* Ensure content is centered on larger screens */
+@media (min-width: 992px) {
+    .container {
+        padding: 0 30px !important;
+    }
 }
 </style> 

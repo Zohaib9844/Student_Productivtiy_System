@@ -1,9 +1,5 @@
-
-
-
-
-
 <script setup>
+import './ProjectShort.css'; 
 defineProps({
     projects: {
         type: Array,
@@ -22,13 +18,25 @@ defineProps({
             <h5 class="mb-0">Projects</h5>
         </div>
         <div class="card-body">
-            <div v-for="(project, index) in projects" :key="index" class="mb-3">
-                <h6 class="mb-1">{{ project.name }}</h6>
-                <p class="text-muted small mb-0">
-                    <span v-for="(member, mIndex) in project.members" :key="mIndex">
-                        {{ member }}{{ mIndex < project.members.length - 1 ? ', ' : '' }}
-                    </span>
-                </p>
+            <div class="table-responsive">
+                <table class="project-table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Members</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(project, index) in projects" :key="index">
+                            <td>{{ project.name }}</td>
+                            <td>
+                                <span v-for="(member, mIndex) in project.members" :key="mIndex">
+                                    {{ member }}{{ mIndex < project.members.length - 1 ? ', ' : '' }}
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

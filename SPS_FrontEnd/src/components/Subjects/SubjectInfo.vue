@@ -13,12 +13,11 @@ defineProps({
 });
 </script>
 
-
 <template>
-    <div class="mb-4">
+    <div class="container-fluid mb-4 mt-5">
         <!-- Subject Image Banner -->
-        <div class="subject-banner mb-4">
-            <img src="@/assets/sda_banner.jpeg" alt="SDA Banner" class="w-100 rounded" style="height: 200px; object-fit: cover;">
+        <div class="subject-banner ">
+            <img src="@/assets/subject.png" alt="SDA Banner" class="w-100 rounded">
         </div>
 
         <!-- Subject Title -->
@@ -28,28 +27,45 @@ defineProps({
         <div class="row g-3">
             <div class="col-12 col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-muted me-3" style="width: 100px;">Professor</span>
+                    <span class="text-muted me-3" style="width: 120px;">Professor</span>
                     <span>{{ subjectData.professor }}</span>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-muted me-3" style="width: 100px;">Email</span>
+                    <span class="text-muted me-3" style="width: 120px;">Email</span>
                     <span>{{ subjectData.email }}</span>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-muted me-3" style="width: 100px;">Course Code</span>
+                    <span class="text-muted me-3" style="width: 120px;">Course Code</span>
                     <span>{{ subjectData.courseCode }}</span>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="d-flex align-items-center">
-                    <span class="text-muted me-3" style="width: 100px;">Date</span>
+                    <span class="text-muted me-3" style="width: 120px;">Date</span>
                     <span>{{ subjectData.date }}</span>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+/* Adjust the subject banner height */
+.subject-banner img {
+    height: 250px; /* Set a normal height */
+    object-fit: cover; /* Ensure the image fills the space properly */
+    border-radius: 12px; /* Smooth edges */
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+    .subject-banner img {
+        height: 200px; /* Adjust for smaller screens */
+    }
+}
+
+</style>

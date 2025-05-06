@@ -21,7 +21,7 @@
             </form>
             <div class="text-center mt-3">
                 <button class="btn btn-light w-100 border">Sign Up with Google</button>
-                <p class="mt-3">Already have an account? <RouterLink to="/">Sign In</RouterLink></p>
+                <p class="mt-3">Already have an account? <RouterLink to="/signin" class="sign-up-link">Sign In</RouterLink></p>
             </div>
         </div>
     </div>
@@ -30,3 +30,21 @@
 <script setup>
 
 </script>
+
+<style scoped>
+.btn-primary.w-100 {
+    background-color: #6434EB !important;
+    color: white !important;
+}
+
+.sign-up-link {
+    color: #6434EB !important; /* Purple color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign-up-link:hover {
+    text-decoration: underline;
+}
+
+</style>

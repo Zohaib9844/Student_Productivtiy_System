@@ -16,7 +16,7 @@ defineProps({
     <div class="mb-4">
         <!-- Project Image Banner -->
         <div class="project-banner mb-4">
-            <img src="@/assets/project_banner.jpeg" alt="Project Banner" 
+            <img src="@/assets/project.png" alt="Project Banner" 
                  class="w-100 rounded" style="height: 200px; object-fit: cover;">
         </div>
 

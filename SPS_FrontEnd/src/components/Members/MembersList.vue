@@ -44,7 +44,12 @@ const filteredMembers = computed(() => {
             <!-- Header with Search and Filters -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h4 class="mb-0">Team Members</h4>
-                <button class="btn btn-primary">Add Member</button>
+                <button 
+    class="btn btn-primary" 
+    style="background-color: #6434EB; color: white; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;">
+    Add Member
+</button>
+
             </div>
 
             <!-- Search and Filter Bar -->
@@ -97,7 +102,12 @@ const filteredMembers = computed(() => {
                             </td>
                             <td>{{ member.email }}</td>
                             <td>
-                                <span class="badge bg-info">{{ member.role }}</span>
+                                <span 
+    class="badge bg-info" 
+    style="background-color: #6434EB !important; color: white; font-size: 0.9rem; padding: 0.5em 1em; font-weight: 500; border-radius: 12px; transition: background-color 0.3s ease;">
+    {{ member.role }}
+</span>
+
                             </td>
                             <td>
                                 <span class="badge" 
@@ -116,12 +126,12 @@ const filteredMembers = computed(() => {
                                 </div>
                             </td>
                             <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-outline-secondary">
-                                        <i class="bi bi-pencil"></i>
+                                <div class="d-flex action-buttons gap-2">
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-pencil me-1"></i> Edit
                                     </button>
                                     <button class="btn btn-sm btn-outline-danger">
-                                        <i class="bi bi-trash"></i>
+                                        <i class="bi bi-trash me-1"></i> Delete
                                     </button>
                                 </div>
                             </td>
@@ -154,5 +164,48 @@ const filteredMembers = computed(() => {
 .badge {
     font-weight: normal;
     padding: 0.5em 0.8em;
+}
+
+/* Improved action buttons */
+.action-buttons {
+    white-space: nowrap;
+}
+
+.btn-outline-primary {
+    color: #6434EB;
+    border-color: #6434EB;
+}
+
+.btn-outline-primary:hover {
+    background-color: #6434EB;
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Make the buttons more visible */
+.btn {
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    transition: all 0.2s ease;
+}
+
+/* Additional table improvements */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+/* Enhance hover effect */
+.table tbody tr:hover {
+    background-color: rgba(100, 52, 235, 0.05);
 }
 </style>

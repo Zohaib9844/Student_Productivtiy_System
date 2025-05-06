@@ -22,15 +22,15 @@ const projectData = {
                 <!-- Project Information -->
                 <ProjectInfo :project-data="projectData" />
 
-                <!-- Content Grid -->
-                <div class="row g-4">
+                <!-- Content Grid - Vertical Stack -->
+                <div class="d-flex flex-column g-4">
                     <!-- Members Section -->
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 mb-4">
                         <MemberShort />
                     </div>
 
                     <!-- Tasks Section -->
-                    <div class="col-12 col-md-8">
+                    <div class="col-12">
                         <TaskShort />
                     </div>
                 </div>
@@ -41,7 +41,33 @@ const projectData = {
     </div>
 </template>
 
+<style scoped>
+/* Proper Bootstrap container styling */
+main {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
 
+/* Bootstrap column adjustments */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Wider container with even spacing */
+.container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    max-width: 1900px !important; /* Wider than Bootstrap default */
+    margin-left: 0px; 
+    margin-right: 290px; 
+}
+
+/* Add more space between items */
+.g-4 {
+    --bs-gutter-x: 2rem !important;
+}
+</style>
 
 
 

@@ -10,13 +10,13 @@ const subjects = ref([
     {
         id: 1,
         name: 'SDA',
-        image: '/src/assets/sda-image.jpg',
+        image: '/src/assets/subject.png',
         status: 'Open'
     },
     {
         id: 2,
         name: 'Technical Writing',
-        image: '/src/assets/technical-writing.jpg',
+        image: '/src/assets/subject2.png',
         status: 'Open'
     }
 ]);
@@ -64,6 +64,7 @@ const subjects = ref([
 .border-dashed:hover {
     background-color: rgba(0, 0, 0, 0.03);
 }
+
 .card:hover {
     transform: translateY(-5px);
 }
@@ -71,5 +72,15 @@ const subjects = ref([
 .badge {
     font-weight: normal;
     padding: 0.5em 1em;
+    background-color: #6434EB !important ;/* Sets the Open badge to the desired color */
+    color: #ffffff; /* Ensures text contrast with the badge background */
+    border-radius: 12px; /* Makes the badge rounded */
+    font-size: 0.9rem; /* Adjusts text size for consistency */
+    transition: all 0.3s ease; /* Smooth hover effects */
 }
+
+.badge:hover {
+    background-color: #5028C2; /* Darker shade for hover effect */
+}
+
 </style>

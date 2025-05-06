@@ -55,7 +55,13 @@ const closeTaskDetails = () => {
     <div class="mb-4">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h4>Tasks</h4>
-            <button class="btn btn-primary btn-sm" @click="openAddTask">Add Task</button>
+            <button 
+    class="btn btn-primary btn-sm" 
+    @click="openAddTask" 
+    style="background-color: #6434EB !important; color: white; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;">
+    Add Task
+</button>
+
         </div>
         <div class="table-responsive">
             <table class="table">
