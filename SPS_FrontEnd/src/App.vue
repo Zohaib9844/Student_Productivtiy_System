@@ -15,7 +15,7 @@ html, body {
   padding: 0 !important;
   width: 100% !important;
   overflow-x: hidden !important;
-  background-color: #fff9c6;
+  background-color: #f4f4f4;
 }
 
 #app {

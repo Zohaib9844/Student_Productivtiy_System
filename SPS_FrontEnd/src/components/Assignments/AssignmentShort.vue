@@ -1,4 +1,3 @@
-
 <script setup>
 import './AssignmentShort.css';
 
@@ -16,12 +15,12 @@ defineProps({
 
 <template>
   <div class="card h-100 assignment-card">
-    <div class="card-header bg-white">
-      <h5 class="mb-0">Assignments</h5>
-    </div>
+        <div class="card-header assignment-header">
+    <h5 class="mb-0">Assignments</h5>
+</div>
     <div class="card-body">
       <div class="table-responsive">
-        <table class="table table-borderless">
+        <table class="table table-borderless assignment-table">
           <thead>
             <tr>
               <th>Name</th>
@@ -41,3 +40,40 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.assignment-card {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.card-header h5 {
+    font-weight: 600;
+    color: #333; /* Darker color for readability */
+}
+
+.assignment-table th {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4A4A4A;
+}
+
+.assignment-table td {
+    font-size: 16px;
+    color: #555; /* Balanced tone for clarity */
+}
+.assignment-header {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Apply hover effect when hovering over the entire card */
+.card:hover .assignment-header {
+    background-color: #b8b8ff  !important;
+    color: white !important;
+}
+</style>

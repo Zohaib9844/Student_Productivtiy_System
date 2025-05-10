@@ -70,7 +70,7 @@ const projects = ref([
 }
 
 .badge.bg-success {
-    background-color: #6434EB !important;
+    background-color: #52b788 !important;
 }
 /* Add top margin to the container */
 .container {

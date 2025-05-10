@@ -14,18 +14,21 @@
                         <LecturesShort />
                     </div>
 
-                    <!-- Assignments Section -->
-                    <div class="col-12 col-md-6">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4>Assignments</h4>
-                            <button 
-                                class="btn btn-primary btn-sm" 
-                                style="background-color: #6434EB !important; color: white; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;">
-                                Add New
-                            </button>
-                        </div>
-                        <AssignmentShort :assignments="assignments" />
-                    </div>
+                   <!-- Assignments Section -->
+<div class="col-12 col-md-6">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #333;">
+            Assignments
+        </h4>
+        <button 
+            class="btn btn-primary btn-sm" 
+            style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; background-color: #6930c3  !important; color: white; border: none; border-radius: 5px; padding: 8px 16px; cursor: pointer; transition: background-color 0.3s ease;">
+            Add New
+        </button>
+    </div>
+    <AssignmentShort :assignments="assignments" />
+</div>
+
 
                     <!-- Notes Section -->
                     <div class="col-12">

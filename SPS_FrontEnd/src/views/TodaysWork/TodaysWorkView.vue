@@ -8,13 +8,14 @@
                 <div class="header d-flex justify-content-between align-items-center mb-4">
                     <h2 class="mb-0">Today's Work</h2>
                     <div class="d-flex gap-2">
-                        <button class="btn-filter">
-                            <i class="bi bi-filter"></i> Filter
-                        </button>
+                        <button class="btn-filter" style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; background-color: white; color: #6930c3; border: 1px solid #6434EB; padding: 8px 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+    <i class="bi bi-filter"></i> Filter
+</button>
 
-                        <button class="btn-add">
-                            <i class="bi bi-plus-lg"></i> Add Task
-                        </button>
+<button class="btn-add" style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; background-color: #6930c3; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+    <i class="bi bi-plus-lg"></i> Add Task
+</button>
+
                     </div>
                 </div>
 
@@ -34,28 +35,43 @@
                         </div>
                     </div>
 
-                    <!-- Quick Stats (Right Side) -->
-                    <div class="col-12 col-lg-4">
-                        <div class="card quick-stats">
-                            <div class="card-body">
-                                <h5 class="card-title mb-4">Quick Stats</h5>
-                                <div class="row g-3"><!-- Changed from "column" to "row" -->
-                                    <div class="col-6 mb-4">
-                                        <div class="stat-box tasks">
-                                            <h6>Tasks</h6>
-                                            <h3>{{ tasks.length }}</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="stat-box assignments">
-                                            <h6>Assignments</h6>
-                                            <h3>{{ assignments.length }}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                   <!-- Quick Stats (Right Side) -->
+<div class="col-12 col-lg-4">
+    <div class="card quick-stats" 
+         style="background-color: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div class="card-body">
+            <h5 class="card-title" 
+                style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #333; margin-bottom: 16px;">
+                Quick Stats
+            </h5>
+            <div class="row g-3">
+                <div class="col-6 mb-4">
+                    <div class="stat-box tasks" 
+                         style="padding: 15px; border-radius: 8px; text-align: center; background-color: #f6f2b5;">
+                        <h6 style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #495057;">
+                            Tasks
+                        </h6>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: #333;">
+                            {{ tasks.length }}
+                        </h3>
                     </div>
+                </div>
+                <div class="col-6">
+                    <div class="stat-box assignments" 
+                         style="padding: 15px; border-radius: 8px; text-align: center; background-color: #fddae3;">
+                        <h6 style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #495057;">
+                            Assignments
+                        </h6>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: #333;">
+                            {{ assignments.length }}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                     <!-- Calendar Section (Below) -->
                     <div class="col-12">

@@ -4,12 +4,14 @@
         <MainNavbar />
         
         <!-- Main Content -->
-        <main class="content-container">
+        <main class="content-container flex-grow-1">
             <SubjectGrid />
         </main>
 
         <!-- Footer -->
-        <MainFooter />
+        <div>
+            <MainFooter />
+        </div>
     </div>
 </template>
 
@@ -23,9 +25,8 @@ import MainFooter from '@/components/MainParts/MainFooter.vue';
 /* Ensure SubjectGrid is positioned right below the navbar */
 .content-container {
     margin-top: 110px; /* Push content below the navbar */
-   
+    margin-bottom: 40px; /* Add space above the footer */
     padding: 0 20px; /* Balances horizontal spacing */
-
 }
 
 /* Remove left-side white space */

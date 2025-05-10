@@ -23,25 +23,31 @@
 
 <style scoped>
 .footer {
-    width: 100vw; /* Full viewport width */
+    font-family: 'Poppins', sans-serif; /* Modern and sleek */
+    background-color: #f8f9fa; /* Light, clean background */
     padding: 15px 0;
-    background-color: #f8f9fa;
 }
 
-/* Force footer to align properly */
-body, html {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent unwanted scrolling */
-}
-
-/* Fix footer alignment */
 .footer-container {
-    width: 100%;
-    max-width: 1400px; /* Adjust as needed */
-    margin: 0 auto; /* Centers the footer */
-    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-muted {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c757d; /* Subtle and stylish */
+}
+
+a.text-muted {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a.text-muted:hover {
+    color: #007bff; /* Elegant hover effect */
 }
 
 </style>

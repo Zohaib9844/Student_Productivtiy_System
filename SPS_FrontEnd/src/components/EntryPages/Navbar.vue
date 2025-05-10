@@ -2,16 +2,18 @@
   <nav class="navbar navbar-expand-lg border-bottom shadow-sm">
       <div class="navbar-container">
           <!-- Logo and Branding -->
-          <RouterLink style="color: #6434EB;" class="navbar-brand d-flex align-items-center fw-bold" to="/">
-    <img src="@/assets/logo.jpg" alt="Logo" class="logo">
-    Student Productivity System
-</RouterLink>
+          <RouterLink 
+              class="navbar-brand d-flex align-items-center fw-bold brand-text" 
+              to="/">
+              <img src="@/assets/logo.jpg" alt="Logo" class="logo">
+              Student Productivity System
+          </RouterLink>
 
           <!-- Navigation Buttons -->
           <div class="d-flex">
               <RouterLink 
                   to="/signup" 
-                  :class="['btn me-2']"
+                  :class="['btn me-2 btn-custom']"
                   :style="{
                       backgroundColor: isSignUpActive ? '#6434EB' : 'white',
                       color: isSignUpActive ? 'white' : '#6434EB',
@@ -23,7 +25,7 @@
 
               <RouterLink 
                   to="/signin" 
-                  :class="['btn']"
+                  :class="['btn btn-custom']"
                   :style="{
                       backgroundColor: isSignInActive ? '#6434EB' : 'white',
                       color: isSignInActive ? 'white' : '#6434EB',
@@ -47,12 +49,15 @@ const isSignInActive = computed(() => route.path === '/signin');
 </script>
 
 <style scoped>
-/* Force Navbar to Full Width */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
+
+/* Navbar Styling */
 .navbar {
   width: 100vw;
   padding: 10px 0;
   margin: 0;
-  background-color: white;
+  background-color: #f4f4f4;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,9 +68,6 @@ const isSignInActive = computed(() => route.path === '/signin');
 /* Container to Remove White Spaces */
 .navbar-container {
   width: 100%;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,18 +80,29 @@ const isSignInActive = computed(() => route.path === '/signin');
   margin-left: 25px;
 }
 
+/* Brand Text Styling */
+.brand-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #6434EB !important;
+}
+
 /* Buttons Styling */
-.btn {
-  transition: all 0.3s ease;
-  padding: 8px 16px;
-  font-size: 1rem;
+.btn-custom {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 18px;
   border-radius: 5px;
   text-align: center;
   margin-right: 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Hover Effects */
-.btn:hover {
+.btn-custom:hover {
   background-color: #6434EB !important;
   color: white !important;
 }

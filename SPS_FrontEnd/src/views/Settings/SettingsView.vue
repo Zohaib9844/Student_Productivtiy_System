@@ -37,11 +37,10 @@ const settings = ref([
     }
 ]);
 </script>
-
 <template>
     <div class="min-vh-100 d-flex flex-column">
         <MainNavbar />
-        
+
         <main class="flex-grow-1 py-4">
             <div class="container">
                 <div class="row g-4">
@@ -49,59 +48,43 @@ const settings = ref([
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="card border-0 shadow-sm">
                             <!-- Profile Card -->
-                            <div class="card-body">
-                                <div class="text-center mb-4">
-                                    <div class="position-relative d-inline-block">
-                                        <div class="rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
-                                            <img :src="currentUser.avatar" alt="Profile" class="img-fluid"
-                                                 onerror="this.src='https://via.placeholder.com/100'">
-                                        </div>
-                                        <div class="position-absolute bottom-0 end-0">
-                                            <div class="bg-primary text-white rounded-circle p-2">
-                                                <i class="bi bi-pencil-fill small"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h5 class="mt-3 mb-1">{{ currentUser.name }}</h5>
-                                    <p class="text-muted small mb-3">{{ currentUser.email }}</p>
-                                    <div class="progress" style="height: 6px;">
-                                        <div class="progress-bar bg-primary" 
-                                             :style="{ width: `${profileCompletion}%` }"
-                                             role="progressbar"
-                                             :aria-valuenow="profileCompletion"
-                                             aria-valuemin="0"
-                                             aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="mt-2 mb-0 small">Profile {{ profileCompletion }}% Complete</p>
+                            <div class="card-body text-center">
+                                <h5 style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #333;">
+                                    {{ currentUser.name }}
+                                </h5>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #6C757D;">
+                                    {{ currentUser.email }}
+                                </p>
+                                <div class="progress" style="height: 6px;">
+                                    <div class="progress-bar bg-primary" 
+                                         :style="{ width: `${profileCompletion}%` }"
+                                         role="progressbar"
+                                         :aria-valuenow="profileCompletion"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"></div>
                                 </div>
-
-                                <!-- Settings Navigation -->
-                                <div class="settings-nav">
-                                    <div v-for="setting in settings" 
-                                         :key="setting.title"
-                                         class="setting-item p-3 rounded mb-2"
-                                         :class="{ 'bg-light': setting.isActive }">
-                                        <div class="d-flex align-items-center">
-                                            <i :class="['bi', setting.icon, 'me-3']"></i>
-                                            <div>
-                                                <h6 class="mb-1">{{ setting.title }}</h6>
-                                                <p class="text-muted small mb-0">{{ setting.description }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500; color: #333;">
+                                    Profile {{ profileCompletion }}% Complete
+                                </p>
                             </div>
                         </div>
 
-                        <!-- Deactivate Account -->
-                        <div class="mt-4">
-                            <div class="card border-danger">
-                                <div class="card-body">
-                                    <h6 class="text-danger mb-2">Deactivate account</h6>
-                                    <p class="text-muted small mb-3">
-                                        Temporarily disable your account
-                                    </p>
-                                    <button class="btn btn-danger btn-sm w-100">Deactivate</button>
+                        <!-- Settings Navigation -->
+                        <div class="settings-nav mt-4">
+                            <div v-for="setting in settings" :key="setting.title" 
+                                 class="setting-item p-3 rounded mb-2"
+                                 :class="{ 'bg-light': setting.isActive }"
+                                 style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; transition: background-color 0.2s ease;">
+                                <div class="d-flex align-items-center">
+                                    <i :class="['bi', setting.icon, 'me-3']"></i>
+                                    <div>
+                                        <h6 style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 4px;">
+                                            {{ setting.title }}
+                                        </h6>
+                                        <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #6C757D; margin-bottom: 0;">
+                                            {{ setting.description }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -111,25 +94,31 @@ const settings = ref([
                     <div class="col-12 col-md-8 col-lg-9">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h4 class="mb-4">User Management</h4>
-                                
+                                <h4 style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 600; color: #333;">
+                                    User Management
+                                </h4>
+
                                 <!-- Profile Section -->
                                 <div class="mb-4">
-                                    <label class="form-label text-muted">Profile</label>
-                                    <input type="text" class="form-control" 
-                                           placeholder="Your name, Email address">
+                                    <label style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #6C757D;">
+                                        Profile
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Your name, Email address">
                                 </div>
 
                                 <!-- Password Section -->
                                 <div class="mb-4">
-                                    <label class="form-label text-muted">Password</label>
-                                    <input type="password" class="form-control" 
-                                           placeholder="Your email address to receive notifications">
+                                    <label style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #6C757D;">
+                                        Password
+                                    </label>
+                                    <input type="password" class="form-control" placeholder="Your email address to receive notifications">
                                 </div>
 
                                 <!-- Notifications Section -->
                                 <div class="mb-4">
-                                    <label class="form-label text-muted">Notifications</label>
+                                    <label style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #6C757D;">
+                                        Notifications
+                                    </label>
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="emailNotifications">
                                         <label class="form-check-label" for="emailNotifications">
@@ -140,7 +129,9 @@ const settings = ref([
 
                                 <!-- Timezone Section -->
                                 <div class="mb-4">
-                                    <label class="form-label text-muted">Time zone</label>
+                                    <label style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; color: #6C757D;">
+                                        Time zone
+                                    </label>
                                     <select class="form-select">
                                         <option>Pacific Time (US)</option>
                                         <option>Eastern Time (US)</option>
@@ -149,6 +140,27 @@ const settings = ref([
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Deactivate Account (Moved to Right Side) -->
+                       <!-- Deactivate Account (Small Rectangle/Square) -->
+<div class="mt-4">
+    <div class="card border-danger shadow-sm" 
+         style="width: 250px; height: 250px; display: flex; justify-content: center; align-items: center; text-align: center; border-radius: 12px;">
+        <div class="card-body">
+            <h6 style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #dc3545;">
+                Deactivate Account
+            </h6>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #6C757D;">
+                Temporarily disable your account
+            </p>
+            <button class="btn btn-danger btn-sm w-100" 
+                    style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 500; padding: 8px 16px;">
+                Deactivate
+            </button>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -157,6 +169,8 @@ const settings = ref([
         <MainFooter />
     </div>
 </template>
+
+
 
 <style scoped>
 #app {

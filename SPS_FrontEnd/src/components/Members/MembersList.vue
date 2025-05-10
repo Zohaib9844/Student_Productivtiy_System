@@ -172,12 +172,12 @@ const filteredMembers = computed(() => {
 }
 
 .btn-outline-primary {
-    color: #6434EB;
-    border-color: #6434EB;
+    color: #6930c3 ;
+    border-color: #6930c3;
 }
 
 .btn-outline-primary:hover {
-    background-color: #6434EB;
+    background-color: #5028C2;
     color: white;
 }
 
